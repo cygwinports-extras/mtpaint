@@ -1,0 +1,80 @@
+mtpaint
+------------------------------------------
+mtPaint is a GTK+ painting program designed for creating icons and 
+pixel-based artwork. It can edit indexed palette or 24 bit RGB images 
+and offers painting, palette, and image manipulation tools.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  gdk-pixbuf2-2.10.9-1
+  glib2-2.12.9-1
+  gtk2-x11-2.10.9-1
+  libX11_6-1.1.1-1
+  libgif4-4.1.4-2
+  libintl8-0.15-1
+  libjpeg62-6b-12
+  libpng12-1.2.12-1
+  libtiff5-3.8.2-3
+  pango-1.14.10-1
+  zlib-1.2.3-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://mtpaint.sourceforge.net/
+
+Canonical download:
+  http://downloads.sourceforge.net/mtpaint/
+
+-------------------------------------------
+
+Build instructions:
+  unpack mtpaint-3.11-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./mtpaint-3.11-X.cygport all
+
+This will create:
+  /usr/src/mtpaint-3.11-X-src.tar.bz2
+  /usr/src/mtpaint-3.11-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/mtpaint.exe
+  /usr/share/doc/Cygwin/mtpaint-3.11.README
+  /usr/share/doc/mtpaint-3.11/COPYING
+  /usr/share/doc/mtpaint-3.11/NEWS
+  /usr/share/doc/mtpaint-3.11/README
+  /usr/share/locale/cs/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/de_DE/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/es/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/fr/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/pl/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/pt/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/pt_BR/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/sk/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/tr/LC_MESSAGES/mtpaint.mo
+  /usr/share/locale/zh_TW/LC_MESSAGES/mtpaint.mo
+  /usr/share/man/man1/mtpaint.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 3.11-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
