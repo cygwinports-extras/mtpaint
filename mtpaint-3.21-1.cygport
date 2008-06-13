@@ -1,0 +1,24 @@
+DESCRIPTION="GTK+ paint program"
+HOMEPAGE="http://mtpaint.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	./configure \
+		--prefix=/usr --bindir=/usr/bin --libdir=/usr/lib \
+		--locale=/usr/share/locale --mandir=/usr/share/man \
+		686 gtk2 GIF jpeg tiff intl man \
+		|| error "configure failed"
+	cygmake
+}
+
+src_test() { :; }
+
+src_install() {
+	cd ${B}
+	cyginstall \
+		BIN_INSTALL=${D}/usr/bin \
+		MT_LANG_DEST=${D}/usr/share/locale \
+		MT_MAN_DEST=${D}/usr/share/man/man1
+}
