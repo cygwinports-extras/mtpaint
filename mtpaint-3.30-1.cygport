@@ -1,6 +1,7 @@
 DESCRIPTION="GTK+ paint program"
 HOMEPAGE="http://mtpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+PATCH_URI="3.30-d_type.patch" # REMOVE for Cygwin 1.7!!
 
 src_compile() {
 	lndirs
@@ -8,17 +9,9 @@ src_compile() {
 	./configure \
 		--prefix=/usr --bindir=/usr/bin --libdir=/usr/lib \
 		--locale=/usr/share/locale --mandir=/usr/share/man \
-		686 gtk2 GIF jpeg tiff intl man \
+		686 gtk2 GIF jp2 jpeg tiff intl man \
 		|| error "configure failed"
 	cygmake
 }
 
 src_test() { :; }
-
-src_install() {
-	cd ${B}
-	cyginstall \
-		BIN_INSTALL=${D}/usr/bin \
-		MT_LANG_DEST=${D}/usr/share/locale \
-		MT_MAN_DEST=${D}/usr/share/man/man1
-}
