@@ -1,7 +1,11 @@
 DESCRIPTION="GTK+ paint program"
 HOMEPAGE="http://mtpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-PATCH_URI="3.31-gcc43.patch"
+
+PATCH_URI="
+	3.31-gcc43.patch
+	3.31-libpng14.patch
+"
 
 MAKEOPTS+=" BIN=mtpaint.exe"
 
