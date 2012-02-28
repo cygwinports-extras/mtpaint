@@ -3,7 +3,6 @@ HOMEPAGE="http://mtpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 PATCH_URI="
-	3.31-gcc43.patch
 	3.31-libpng14.patch
 "
 
@@ -15,9 +14,7 @@ src_compile() {
 	./configure \
 		--prefix=/usr --bindir=/usr/bin --libdir=/usr/lib \
 		--locale=/usr/share/locale --mandir=/usr/share/man \
-		686 gtk2 GIF jp2 jpeg tiff intl man \
+		686 gtk2 GIF jp2 jpeg lcms2 tiff intl man \
 		|| error "configure failed"
 	cygmake
 }
-
-src_test() { :; }

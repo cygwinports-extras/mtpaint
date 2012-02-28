@@ -1,5 +1,5 @@
 category: Graphics
-requires: libfreetype6 libgcc1 libgdk_pixbuf2.0_0 libgif4 libglib2.0_0 libgtk2.0_0 libiconv2 libintl8 libjpeg8 libopenjpeg3 libpango1.0_0 libpng14 libtiff5 libX11_6 zlib0
+requires: libfreetype6 libgdk_pixbuf2.0_0 libgif4 libglib2.0_0 libgtk2.0_0 libiconv2 libintl8 libjpeg8 liblcms2_2 libopenjpeg1 libpango1.0_0 libpng14 libtiff5 libX11_6 zlib0
 sdesc: "GTK+ painting program"
 ldesc: "mtPaint is a GTK+ painting program designed for creating icons 
 and pixel-based artwork. It can edit indexed palette or 24 bit RGB 
