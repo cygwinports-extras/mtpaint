@@ -1,6 +1,6 @@
 NAME="mtpaint"
 VERSION=3.40
-RELEASE=3
+RELEASE=4
 CATEGORY="Graphics"
 SUMMARY="GTK+ paint program"
 DESCRIPTION="mtPaint is a GTK+ painting program designed for creating icons
